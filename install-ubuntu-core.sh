@@ -22,7 +22,7 @@ process_download() {
     destination_path="/dev/$disk_name"
     echo "Installation started for Ubuntu Core $core_version to $destination_path"
     echo "Command to run: xzcat -d $1 | sudo dd of=$destination_path bs=32M status=progress; sync"
-    read -p "Continue with current command? " continue_install
+    read -p "Continue with current command? (yes or no)" continue_install
 
     case $continue_install in
         yes|y)
